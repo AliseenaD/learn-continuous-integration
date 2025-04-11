@@ -20,7 +20,6 @@ export const validateBookDetailsMiddleware = (req: RequestWithSanitizedBookDetai
     if (!isValidFamilyName || !isValidFirstName || !isValidGenreName || !isValidBookTitle) {
         return res.status(400).send("Invalid input: All fields must be alphanumericwith spaces allowed.");
     }
-    console.log(familyName, firstName, genreName, bookTitle);
 
     req.familyName = familyName;
     req.firstName = firstName;
